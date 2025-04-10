@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EASendMail" Version="7.9.2.7" />
+    <PackageReference Include="GNA.CommercialLicenseValidator" Version="1.0.4" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.4" />
+    <PackageReference Include="System.IO" Version="4.3.0" />
+    <PackageReference Include="Twilio" Version="7.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="GNAgeneraltools">
+      <HintPath>..\..\GNAgeneraltools\GNAgeneraltools\bin\Release\net8.0\GNAgeneraltools.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
