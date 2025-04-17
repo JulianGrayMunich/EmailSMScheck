@@ -1,8 +1,6 @@
 ﻿using System.Configuration;
 using EASendMail;
 using GNAgeneraltools;
-using Twilio;
-using Twilio.Rest.Api.V2010.Account;
 using GNA_CommercialLicenseValidator;
 
 
@@ -35,12 +33,11 @@ namespace EmailSMScheck
             //==== Validate the EMLSMS license
             LicenseValidator.ValidateLicense("EMLSMS", licenseCode);
 
-
-            Console.WriteLine("Software compiled 20250409\n");
+            Console.WriteLine("Software compiled 20250411");
 
             Console.WriteLine("\nTesting email:");
             string strSubjectLine = strProjectTitle + " test email";
-            string strEmailBody = "System check email";
+            string strEmailBody = gnaT.addCopyright("EmailSMScheck", "System check email");
             bool emailSuccess = false;
 
             try
@@ -98,7 +95,7 @@ namespace EmailSMScheck
                 strLogNote += strProjectTitle+": email operational";
             else
                 strLogNote += strProjectTitle + ": email failed";
-
+         
             strLogNote += " | ";
 
             if (smsSuccess)
